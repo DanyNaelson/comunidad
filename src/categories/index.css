@@ -1,0 +1,140 @@
+#categories-section {
+    margin: 20px auto;
+}
+
+#infographics-container {
+    margin-top: 15px;
+    position: relative;
+}
+
+#progress-bar-container {
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+#share-button-container {
+    bottom: 20px;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.category {
+    margin: 70px 10px;
+    width: 100%;
+}
+
+.category-description {
+    color: #838B95;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.category-title {
+    color: #1E2541;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.infographic-progress {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5.53846px;
+    height: 2px;
+    margin: 0 3px;
+    padding: 2px 0 !important;
+}
+
+.infographic-slider {
+    background-color: transparent !important;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 220px;
+}
+
+.items-container {
+    display: inline-flex;
+    overflow-x: scroll;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.items-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item-text {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 130%;
+    opacity: 0.8;
+}
+
+.rs-carousel {
+    height: fit-content !important;
+}
+
+.rs-carousel-slider {
+    display: flex !important;
+}
+
+.rs-modal-backdrop.rs-anim-fade {
+    background: rgb(0 0 0 / 83%);
+}
+
+.rs-modal-body {
+    border-radius: 6px;
+    margin: 10px !important;
+    max-height: fit-content !important;
+    min-height: 620px;
+    padding-bottom: 0px !important;
+}
+
+.rs-modal-content {
+    padding: 0px !important;
+}
+
+.rs-modal-dialog {
+    margin: 0 auto;
+    border-radius: 18px;
+    max-width: 360px;
+}
+
+.rs-progress-line-inner, .rs-progress-line-bg {
+    height: 4px !important;
+}
+
+.rs-progress-line-bg {
+    background: #000 !important;
+}
+
+.share-button {
+    align-items: center !important;
+    background: #000 !important;
+    border-radius: 110px !important;
+    display: inline-flex !important;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 13px 17px !important;
+}

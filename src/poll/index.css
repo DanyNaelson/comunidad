@@ -1,0 +1,232 @@
+/* poll section */
+
+#poll-container {
+    align-items: flex-start;
+    background: #FFFFFF;
+    border: 1px solid #E1E8EA;
+    border-radius: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 425px;
+    min-height: 300px;
+    padding: 56px;
+    position: relative;
+    width: 100%;
+}
+
+#poll-section {
+    display: flex;
+    justify-content: center;
+}
+
+#poll-section-title {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    margin: 18px auto;
+    width: 357px;
+}
+
+#poll-title {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    flex: none;
+    flex-grow: 0;
+    line-height: 26px;
+    margin: 8px 0px;
+}
+
+#title {
+    color: #838B95;
+    display: flex;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    flex: none;
+    flex-grow: 0;
+    line-height: 20px;
+    margin: 0px 4px;
+    order: 0;
+}
+
+.content-title {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.content-text {
+    color: #838B95;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+.instruction-text {
+    color: #838B95;
+    flex: none;
+    flex-grow: 0;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0px;
+}
+
+.likes-container {
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #F0F3F4;
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 24px;
+}
+
+.like-survey {
+    margin: 0 auto;
+}
+
+.like-text {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.modal-title {
+    align-items: center;
+    color: #1E2541;
+    font-family: 'DM Sans';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 100px auto;
+}
+
+.options-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    flex-grow: 0;
+    margin: 5px 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.option-percent {
+    position: absolute;
+    height: 20px;
+    right: 16px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    text-align: right;
+    color: #000000;
+}
+
+.option-container {
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.option-container-selected {
+    align-items: center;
+    background: #FEF8F6;
+    border: 2px solid #F8D2C4;
+    border-radius: 100px;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.option-title {
+    color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    height: 20px;
+    left: 16px;
+    line-height: 20px;
+    max-width: 280px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.percentage-area {
+    background: #E1E8EA;
+    border-radius: 100px 0 0 100px;
+    height: 48px;
+    position: absolute;
+    width: 0%;
+}
+
+.percentage-area-selected {
+    background: #F8D2C4;
+    border-radius: 100px 0 0 100px;
+    height: 48px;
+    position: absolute;
+    width: 0%;
+}
+
+.rs-drawer-body {
+    margin-top: 30px !important;
+    padding-top: 0px !important;
+}
+
+.rs-drawer-content {
+    border-radius: 25px 25px 0px 0px !important;
+}
+
+.rs-drawer-header {
+    background-color: #FDFAF7 !important;
+    border-bottom: none !important;
+    border-radius: 25px 25px 0px 0px !important;
+}
+
+/* Media Queries */
+
+@media (max-width: 568px) {
+    #poll-container {
+        padding: 30px !important;
+    }
+}
+
+/* end poll section */

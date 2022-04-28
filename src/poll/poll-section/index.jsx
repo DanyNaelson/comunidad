@@ -125,7 +125,9 @@ function PollSection() {
                             ))}
                             <p className='instruction-text'>Selecciona 1 respuesta y descubre lo que opina el resto de la comunidad.</p>
                         </div>
-                        : <p>No poll :(</p>
+                        : <div id='poll-container'>
+                            <p id='poll-title' style={{ margin: '0px auto' }}>No hay encuesta para hoy</p>
+                        </div>
                     : <div id='poll-container'>
                         <Loader center size='lg' vertical backdrop />
                     </div>

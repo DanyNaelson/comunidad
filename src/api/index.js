@@ -29,19 +29,7 @@ const api = async ({ endpoint, method = 'GET', body, headers: {} }) => {
         const response = await fetch(`${baseURL}${endpoint}`, options)
         const result = await response.json()
 
-        if (!response.ok) {
-            throw {
-                statusCode: response.status,
-                ...result,
-                headers: response.headers
-            }
-        }
-
-        return {
-            statusCode: response.status,
-            ...result,
-            headers: response.headers
-        }
+        return result
     } catch {
         throw error
     }

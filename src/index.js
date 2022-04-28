@@ -6,6 +6,7 @@ import './index.less'
 import PollSection from './poll/poll-section'
 import { BASE_URL, DEFAULT_HEADERS } from './utils/constants'
 import { getToken, setToken } from './utils/localstorage'
+import './i18n'
 
 class App extends Component {
     componentDidMount() {

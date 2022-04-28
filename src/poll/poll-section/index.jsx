@@ -7,8 +7,10 @@ import 'rsuite/Placeholder/styles/index.less';
 import { getToken } from '../../utils/localstorage';
 import { BASE_URL } from '../../utils/constants';
 import { InfoIcon } from '../../svg';
+import { useTranslation } from 'react-i18next';
 
 function PollSection() {
+    const { t, i18n } = useTranslation();
     const [pollIds, setPollIds] = useState(null)
     const [pollId, setPollId] = useState(null)
     const [poll, setPoll] = useState(null)
@@ -26,6 +28,12 @@ function PollSection() {
 
 
     useEffect(() => {
+        const pathname = window.location.pathname
+        const params = pathname.split('/')
+        const lang = params[1]
+
+        lang === "en" && i18n.changeLanguage(lang)
+
         if (token) {
             const headers = new Headers();
             headers.append("Authorization", "Bearer " + token)
@@ -126,7 +134,7 @@ function PollSection() {
                             <p className='instruction-text'>Selecciona 1 respuesta y descubre lo que opina el resto de la comunidad.</p>
                         </div>
                         : <div id='poll-container'>
-                            <p id='poll-title' style={{ margin: '0px auto' }}>No hay encuesta para hoy</p>
+                            <p id='poll-title' style={{ margin: '0px auto' }}>{t('no_poll')}</p>
                         </div>
                     : <div id='poll-container'>
                         <Loader center size='lg' vertical backdrop />

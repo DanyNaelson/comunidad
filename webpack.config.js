@@ -10,11 +10,6 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.json$/,
-                exclude: /node_modules/,
-                use: ['json-loader']
-            },
-            {
                 type: 'javascript/auto',
                 test: /\.json$/,
                 include: /(lottie)/,
@@ -60,7 +55,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.css']
+        extensions: ['*', '.js', '.jsx', '.css', '.json']
     },
     output: {
         path: __dirname + '/dist',

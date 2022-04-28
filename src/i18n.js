@@ -1,25 +1,21 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import esTranslations from './../public/locales/es/translation.json';
+import enTranslations from './../public/locales/en/translation.json';
 
 i18n
     .use(initReactI18next)
     .init({
         resources: {
-            en: {
-                translation: {
-                    "question_of_the_day": "Question of the day",
-                    "no_poll": "There is no poll for today"
-                }
-            },
             es: {
-                translation: {
-                    "question_of_the_day": "Pregunta del día",
-                    "no_poll": "No hay encuesta para hoy"
-                }
+                translation: esTranslations
+            },
+            en: {
+                translation: enTranslations
             }
         },
         lng: "es",
-        fallbackLng: ["en", "es"],
+        fallbackLng: ["es", "en"],
         interpolation: {
             escapeValue: false
         }

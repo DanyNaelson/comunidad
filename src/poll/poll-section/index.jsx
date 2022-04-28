@@ -30,7 +30,7 @@ function PollSection() {
     useEffect(() => {
         const pathname = window.location.pathname
         const params = pathname.split('/')
-        const lang = params[1]
+        const lang = params.length > 1 ? params[1] : ""
 
         lang === "en" && i18n.changeLanguage(lang)
 
@@ -107,7 +107,7 @@ function PollSection() {
                     ? poll
                         ? <div id='poll-container'>
                             {voting && <Loader style={{ zIndex: 2 }} center size='lg' vertical backdrop />}
-                            <p id='title'>Pregunta del día <span style={{ cursor: 'pointer', marginLeft: 5 }} onClick={() => setShowDrawer(true)}><InfoIcon /></span></p>
+                            <p id='title'>{t('poll.question_of_the_day')} <span style={{ cursor: 'pointer', marginLeft: 5 }} onClick={() => setShowDrawer(true)}><InfoIcon /></span></p>
                             <p id='poll-title'>{poll.question}</p>
                             {poll.options.map((option, index) => (
                                 <div
@@ -131,10 +131,10 @@ function PollSection() {
                                     </div>
                                 </div>
                             ))}
-                            <p className='instruction-text'>Selecciona 1 respuesta y descubre lo que opina el resto de la comunidad.</p>
+                            <p className='instruction-text'>{t('poll.instruction')}</p>
                         </div>
                         : <div id='poll-container'>
-                            <p id='poll-title' style={{ margin: '0px auto' }}>{t('no_poll')}</p>
+                            <p id='poll-title' style={{ margin: '0px auto' }}>{t('poll.no_poll')}</p>
                         </div>
                     : <div id='poll-container'>
                         <Loader center size='lg' vertical backdrop />
@@ -143,19 +143,19 @@ function PollSection() {
                 <Drawer placement='bottom' size='lg' open={showDrawer} onClose={() => setShowDrawer(false)}>
                     <Drawer.Header>
                         <p className='modal-title'>
-                            Pregunta del día
+                            {t('poll.question_of_the_day')}
                         </p>
                     </Drawer.Header>
                     <Drawer.Body>
                         <div>
                             <p className='content-title'>
-                                ¿Cómo funciona?
+                                {t('poll.how_it_works')}
                             </p>
                             <p className='content-text'>
-                                La pregunta del día es una serie diaria de preguntas, creadas y seleccionadas para ti con la finalidad de que conozcas la opinión de la comunidad Jefa sobre ciertas temáticas.
+                                {t('poll.explanation')}
                             </p>
                             <p className='content-text'>
-                                Tu participación es completamente voluntaria :)
+                                {t('poll.content_text')}
                             </p>
                             {/* <div className='likes-container'>
                                 <div className='like-survey'>

@@ -5,7 +5,7 @@ const ModalLottie = ({ item }) => {
     const [animationData, setAnimationData] = useState(null)
 
     useEffect(() => {
-        fetch(item.lottie)
+        fetch(item.lottiFile)
             .then(response => response.json())
             .then(data => setAnimationData(data))
             .catch(error => console.log('error', error.message))

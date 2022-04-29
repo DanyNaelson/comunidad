@@ -8,9 +8,10 @@ import { getToken } from '../../utils/localstorage';
 import { BASE_URL } from '../../utils/constants';
 import { InfoIcon } from '../../svg';
 import { useTranslation } from 'react-i18next';
+import { selectLanguage } from '../../utils';
 
 function PollSection() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [pollIds, setPollIds] = useState(null)
     const [pollId, setPollId] = useState(null)
     const [poll, setPoll] = useState(null)
@@ -28,11 +29,7 @@ function PollSection() {
 
 
     useEffect(() => {
-        const pathname = window.location.pathname
-        const params = pathname.split('/')
-        const lang = params.length > 1 ? params[1] : ""
-
-        lang === "en" && i18n.changeLanguage(lang)
+        selectLanguage()
 
         if (token) {
             const headers = new Headers();

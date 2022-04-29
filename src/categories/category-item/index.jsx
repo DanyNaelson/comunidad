@@ -5,7 +5,7 @@ const CategoryItem = ({ item, setItem, setOpen, index, setCategoryIndex }) => {
     const [animationData, setAnimationData] = useState(null)
 
     useEffect(() => {
-        fetch(item.lottiFile)
+        fetch(item.mainLottie)
             .then(response => response.json())
             .then(data => setAnimationData(data))
             .catch(error => console.log('error', error.message))

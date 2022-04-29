@@ -1,4 +1,9 @@
 {
+    "category": {
+        "entrepreneurship": "Emprendimiento",
+        "just_for_fun": "Solo por diversión",
+        "personal_development": "Desarrollo Personal"
+    },
     "poll": {
         "content_text": "Tu participación es completamente voluntaria :)",
         "how_it_works": "¿Cómo funciona?",

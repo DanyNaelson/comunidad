@@ -10,7 +10,7 @@ import { selectLanguage } from '../../utils';
 import { useTranslation } from 'react-i18next';
 
 const CategoriesSection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [categories, setCategories] = useState(fakeCategories)
     const [categoryIndex, setCategoryIndex] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -18,7 +18,8 @@ const CategoriesSection = () => {
     const [itemSelected, setItem] = useState(null);
 
     useEffect(() => {
-        selectLanguage()
+        const lang = selectLanguage()
+        lang === "en" && i18n.changeLanguage(lang)
 
         const token = getToken()
 

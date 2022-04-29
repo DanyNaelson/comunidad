@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { selectLanguage } from '../../utils';
 
 function PollSection() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [pollIds, setPollIds] = useState(null)
     const [pollId, setPollId] = useState(null)
     const [poll, setPoll] = useState(null)
@@ -29,7 +29,8 @@ function PollSection() {
 
 
     useEffect(() => {
-        selectLanguage()
+        const lang = selectLanguage()
+        lang === "en" && i18n.changeLanguage(lang)
 
         if (token) {
             const headers = new Headers();

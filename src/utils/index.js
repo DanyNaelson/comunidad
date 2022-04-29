@@ -3,5 +3,5 @@ export const selectLanguage = () => {
     const params = pathname.split('/')
     const lang = params.length > 1 ? params[1] : ""
 
-    lang === "en" && i18n.changeLanguage(lang)
+    return lang
 }

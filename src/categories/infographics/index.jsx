@@ -3,7 +3,7 @@ import { Button, Popover, Progress, Whisper } from 'rsuite';
 import 'rsuite/Progress/styles/index.less';
 import 'rsuite/Button/styles/index.less';
 import ModalLottie from '../modal-lottie';
-import { ShareIcon } from '../../svg';
+import { LeftArrow, RightArrow, ShareIcon } from '../../svg';
 import {
     FacebookIcon,
     FacebookShareButton,
@@ -37,7 +37,7 @@ const Infographics = ({ items, setOpen }) => {
                 setProgress(prevProgress => prevProgress + 2)
             } else {
                 if (step === items.length)
-                    setOpen(false)
+                    false && setOpen(false)
                 else
                     setStep(prevStep => prevStep < items.length ? prevStep + 1 : 1)
             }
@@ -50,8 +50,28 @@ const Infographics = ({ items, setOpen }) => {
         setProgress(0)
     }, [step])
 
+    const nextStep = () => {
+        setStep(prevStep => prevStep < items.length && prevStep + 1)
+    }
+
+    const prevStep = () => {
+        setStep(prevStep => prevStep > 1 && prevStep - 1)
+    }
+
     return (
         <div id='infographics-container'>
+            <div id="controls">
+                {step > 1 &&
+                    <div id="left-arrow" onClick={prevStep}>
+                        <LeftArrow />
+                    </div>
+                }
+                {step < items.length &&
+                    <div id="right-arrow" onClick={nextStep}>
+                        <RightArrow />
+                    </div>
+                }
+            </div>
             <div id='progress-bar-container'>
                 {items.map((item, index) => (
                     <Progress.Line

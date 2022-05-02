@@ -2,9 +2,35 @@
     margin: 20px auto;
 }
 
+#close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -28px;
+    width: 15px;
+}
+
+#controls {
+    display: flex;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    z-index: 2;
+}
+
 #infographics-container {
+    height: 100%;
     margin-top: 15px;
     position: relative;
+}
+
+#left-arrow {
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 0px;
+    padding: 10px 15px;
+    position: absolute;
 }
 
 #progress-bar-container {
@@ -12,6 +38,15 @@
     position: absolute;
     width: 100%;
     z-index: 2;
+}
+
+#right-arrow {
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: absolute;
+    right: 0px;
 }
 
 #share-button-container {
@@ -105,7 +140,9 @@
     margin: 10px !important;
     max-height: fit-content !important;
     min-height: 620px;
+    overflow: visible !important;
     padding-bottom: 0px !important;
+    padding-top: 1px;
 }
 
 .rs-modal-content {
@@ -138,3 +175,23 @@
     line-height: 20px;
     padding: 13px 17px !important;
 }
+
+/** Media queries **/
+@media (min-width: 479px) {
+    #left-arrow {
+        background: #fff;
+        border-radius: 50%;
+        left: -75px;
+        padding: 10px 15px;
+        position: absolute;
+    }
+
+    #right-arrow {
+        background: #fff;
+        border-radius: 50%;
+        padding: 10px 15px;
+        position: absolute;
+        right: -75px;
+    }
+}
+/** End media queries **/

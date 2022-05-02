@@ -8,6 +8,7 @@ import Infographics from '../infographics';
 import { fakeCategories } from '../../utils/categories';
 import { selectLanguage } from '../../utils';
 import { useTranslation } from 'react-i18next';
+import { CloseIcon } from '../../svg';
 
 const CategoriesSection = () => {
     const { t, i18n } = useTranslation();
@@ -57,6 +58,7 @@ const CategoriesSection = () => {
                 ))}
             </div>
             <Modal open={open} onClose={() => setOpen(false)}>
+                <CloseIcon id="close-icon" onClick={() => setOpen(false)} />
                 {itemSelected && 
                     <Modal.Body>
                         <Infographics items={itemSelected.items} setOpen={setOpen} />

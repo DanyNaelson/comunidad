@@ -37,7 +37,7 @@ const Infographics = ({ items, setOpen }) => {
                 setProgress(prevProgress => prevProgress + 2)
             } else {
                 if (step === items.length)
-                    false && setOpen(false)
+                    setOpen(false)
                 else
                     setStep(prevStep => prevStep < items.length ? prevStep + 1 : 1)
             }

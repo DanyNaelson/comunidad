@@ -21,6 +21,7 @@
 #infographics-container {
     height: 100%;
     margin-top: 15px;
+    min-height: 600px;
     position: relative;
 }
 
